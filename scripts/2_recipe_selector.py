@@ -5,6 +5,7 @@ Step 2: Select a recipe and extract relevant videos
 from utils import load_hd_epic_data, create_output_dirs
 import pandas as pd
 import json
+from pathlib import Path
 
 def select_recipe(recipes, recipe_timestamps, narrations):
     """
@@ -100,13 +101,17 @@ def select_recipe(recipes, recipe_timestamps, narrations):
         'narrations_count': len(recipe_narrations)
     }
     
-    with open('../outputs/selected_recipe.json', 'w') as f:
+    outputs_dir = Path('../outputs')
+    recipe_json_path = outputs_dir / f'selected_recipe_{selected_recipe_id}.json'
+    recipe_narrations_path = outputs_dir / f'recipe_narrations_{selected_recipe_id}.pkl'
+
+    with open(recipe_json_path, 'w') as f:
         json.dump(output_data, f, indent=2)
     
-    recipe_narrations.to_pickle('../outputs/recipe_narrations.pkl')
+    recipe_narrations.to_pickle(recipe_narrations_path)
     
-    print(f"\n✓ Recipe data saved to ../outputs/selected_recipe.json")
-    print(f"✓ Narrations saved to ../outputs/recipe_narrations.pkl")
+    print(f"\n✓ Recipe data saved to {recipe_json_path}")
+    print(f"✓ Narrations saved to {recipe_narrations_path}")
     
     print("\n" + "="*80)
     print("RECIPE SELECTION COMPLETE")

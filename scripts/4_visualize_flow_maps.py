@@ -8,7 +8,39 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import json
 import pickle
+from pathlib import Path
 from utils import (load_hd_epic_data, get_action_name, count_loops, calculate_pause)
+
+
+def load_selected_recipe_files(outputs_dir='../outputs'):
+    """Load latest recipe-specific selection files from outputs directory."""
+    outputs_path = Path(outputs_dir)
+
+    recipe_json_candidates = sorted(
+        outputs_path.glob('selected_recipe_*.json'),
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+    if not recipe_json_candidates:
+        raise FileNotFoundError(
+            "No selection file found. Run 2_recipe_selector.py first "
+            "to create selected_recipe_<recipe_id>.json"
+        )
+
+    recipe_json_path = recipe_json_candidates[0]
+    with open(recipe_json_path, 'r') as f:
+        recipe_info = json.load(f)
+
+    recipe_id = recipe_info['recipe_id']
+    recipe_narrations_path = outputs_path / f'recipe_narrations_{recipe_id}.pkl'
+    if not recipe_narrations_path.exists():
+        raise FileNotFoundError(
+            f"Missing narration file: {recipe_narrations_path}. "
+            "Run 2_recipe_selector.py again to regenerate outputs."
+        )
+
+    recipe_narrations = pd.read_pickle(recipe_narrations_path)
+    return recipe_info, recipe_narrations
 
 def categorize_sessions(recipe_narrations, video_ids):
     """
@@ -160,11 +192,8 @@ def create_flow_map_comparison(recipe_narrations, session_stats, verb_classes, n
 def main():
     # Load data
     data = load_hd_epic_data('..')
-    
-    with open('../outputs/selected_recipe.json', 'r') as f:
-        recipe_info = json.load(f)
-    
-    recipe_narrations = pd.read_pickle('../outputs/recipe_narrations.pkl')
+
+    recipe_info, recipe_narrations = load_selected_recipe_files('../outputs')
     
     # Categorize sessions
     session_stats = categorize_sessions(recipe_narrations, recipe_info['video_ids'])

@@ -8,8 +8,78 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import json
 import pickle
+from collections import Counter, defaultdict
+from pathlib import Path
 from utils import (load_hd_epic_data, get_verb_name, get_noun_name, 
                    get_action_name, calculate_pause)
+
+
+def load_selected_recipe_files(outputs_dir='../outputs'):
+    """Load latest recipe-specific selection files from outputs directory."""
+    outputs_path = Path(outputs_dir)
+
+    recipe_json_candidates = sorted(
+        outputs_path.glob('selected_recipe_*.json'),
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+    if not recipe_json_candidates:
+        raise FileNotFoundError(
+            "No selection file found. Run 2_recipe_selector.py first "
+            "to create selected_recipe_<recipe_id>.json"
+        )
+
+    recipe_json_path = recipe_json_candidates[0]
+    with open(recipe_json_path, 'r') as f:
+        recipe_info = json.load(f)
+
+    recipe_id = recipe_info['recipe_id']
+    recipe_narrations_path = outputs_path / f'recipe_narrations_{recipe_id}.pkl'
+    if not recipe_narrations_path.exists():
+        raise FileNotFoundError(
+            f"Missing narration file: {recipe_narrations_path}. "
+            "Run 2_recipe_selector.py again to regenerate outputs."
+        )
+
+    recipe_narrations = pd.read_pickle(recipe_narrations_path)
+    return recipe_info, recipe_narrations
+
+
+def extract_ordered_actions(narrations_df, verb_classes_df, noun_classes_df, video_id=None):
+    """Extract ordered action sequence and stats for one video (or first available video)."""
+    if narrations_df.empty:
+        return None, [], Counter(), Counter(), {}
+
+    if video_id is None:
+        video_id = narrations_df['video_id'].iloc[0]
+
+    video_actions = narrations_df[narrations_df['video_id'] == video_id].sort_values('start_timestamp')
+    if video_actions.empty:
+        return video_id, [], Counter(), Counter(), {}
+
+    video_actions = video_actions.copy()
+    video_actions['pause_after'] = calculate_pause(video_actions)
+
+    ordered_steps = []
+    action_pause_accum = defaultdict(list)
+
+    for _, row in video_actions.iterrows():
+        if row['main_action_classes'] and len(row['main_action_classes']) > 0:
+            verb_class, noun_class = row['main_action_classes'][0]
+            action_name = get_action_name(verb_class, noun_class, verb_classes_df, noun_classes_df)
+            pause_after = float(row.get('pause_after', 0.0))
+            ordered_steps.append({'action': action_name, 'pause_after': pause_after})
+            action_pause_accum[action_name].append(pause_after)
+
+    actions = [s['action'] for s in ordered_steps]
+    node_counts = Counter(actions)
+    transition_counts = Counter(zip(actions[:-1], actions[1:]))
+    node_avg_pause = {
+        action: float(np.mean(pauses)) if pauses else 0.0
+        for action, pauses in action_pause_accum.items()
+    }
+
+    return video_id, ordered_steps, node_counts, transition_counts, node_avg_pause
 
 def build_motion_graph(narrations_df, verb_classes_df, noun_classes_df):
     """
@@ -85,7 +155,7 @@ def build_motion_graph(narrations_df, verb_classes_df, noun_classes_df):
     return G
 
 
-def visualize_motion_graph(G, output_path='../outputs/figures/motion_graph.png'):
+def visualize_motion_graph(G, recipe_id, recipe_name, output_path='../outputs/figures/motion_graph.png'):
     """
     Visualize motion graph like Figure 10 example
     """
@@ -165,8 +235,12 @@ def visualize_motion_graph(G, output_path='../outputs/figures/motion_graph.png')
                            font_weight='bold',
                            ax=ax)
     
-    ax.set_title('Recipe Motion Graph: Action Flow with Pause Indicators',
-                fontsize=20, fontweight='bold', pad=20)
+    ax.set_title(
+        f'Recipe Motion Graph: {recipe_name} ({recipe_id})\nAction Flow with Pause Indicators',
+        fontsize=20,
+        fontweight='bold',
+        pad=20,
+    )
     ax.axis('off')
     
     # Legend
@@ -188,6 +262,140 @@ def visualize_motion_graph(G, output_path='../outputs/figures/motion_graph.png')
     plt.close()
 
 
+def visualize_linear_flow(
+    ordered_steps,
+    video_id,
+    recipe_id,
+    recipe_name,
+    node_counts,
+    transition_counts,
+    node_avg_pause,
+    output_path='../outputs/figures/motion_graph_linear.png',
+    columns=8
+):
+    """
+    Visualize one ordered action sequence in linear reading order (left-to-right, top-to-bottom).
+    Each node is indexed to make action order explicit.
+    """
+    print("\n" + "="*80)
+    print("VISUALIZING LINEAR FLOW")
+    print("="*80)
+
+    if not ordered_steps:
+        print("⚠️  No actions available for linear flow visualization")
+        return
+
+    actions = [s['action'] for s in ordered_steps]
+    edge_pauses = [float(s['pause_after']) for s in ordered_steps[:-1]]
+
+    num_actions = len(actions)
+    columns = max(4, columns)
+    rows = int(np.ceil(num_actions / columns))
+
+    fig_width = min(26, max(14, columns * 2.8))
+    fig_height = min(24, max(8, rows * 2.5))
+    fig, ax = plt.subplots(figsize=(fig_width, fig_height))
+
+    positions = {}
+    for idx in range(num_actions):
+        row = idx // columns
+        col = idx % columns
+        x = col
+        y = -row
+        positions[idx] = (x, y)
+
+    max_transition_freq = max(transition_counts.values()) if transition_counts else 1
+
+    # Draw arrows following sequence order
+    for idx in range(num_actions - 1):
+        x1, y1 = positions[idx]
+        x2, y2 = positions[idx + 1]
+        src = actions[idx]
+        dst = actions[idx + 1]
+        pause = edge_pauses[idx] if idx < len(edge_pauses) else 0.0
+        freq = transition_counts.get((src, dst), 1)
+
+        edge_width = 1.2 + 3.8 * (freq / max_transition_freq)
+        if pause > 30:
+            edge_color = '#DC2626'
+        elif pause > 10:
+            edge_color = '#F59E0B'
+        else:
+            edge_color = '#16A34A'
+
+        ax.annotate(
+            "",
+            xy=(x2, y2),
+            xytext=(x1, y1),
+            arrowprops=dict(arrowstyle="->", color=edge_color, lw=edge_width, alpha=0.85),
+        )
+
+    max_node_freq = max(node_counts.values()) if node_counts else 1
+    max_node_pause = max(node_avg_pause.values()) if node_avg_pause else 1.0
+    if max_node_pause <= 0:
+        max_node_pause = 1.0
+
+    # Draw numbered nodes and labels
+    for idx, action in enumerate(actions):
+        x, y = positions[idx]
+        freq = node_counts.get(action, 1)
+        avg_pause = node_avg_pause.get(action, 0.0)
+        node_size = 300 + 700 * (freq / max_node_freq)
+
+        ax.scatter(
+            [x],
+            [y],
+            s=node_size,
+            c=[avg_pause],
+            cmap='YlOrRd',
+            vmin=0,
+            vmax=max_node_pause,
+            edgecolors="#1D4ED8",
+            linewidths=1.4,
+            zorder=3
+        )
+        ax.text(x, y, str(idx + 1), ha='center', va='center', fontsize=8, fontweight='bold', color='#0F172A', zorder=4)
+
+        short_action = action if len(action) <= 34 else action[:31] + '...'
+        ax.text(x, y - 0.28, short_action, ha='center', va='top', fontsize=7.5, color='#111827')
+
+    ax.set_title(
+        f'Linear Action Flow (Indexed): {recipe_name} ({recipe_id}) | {video_id}\n'
+        f'Left-to-right, then top-to-bottom',
+        fontsize=15,
+        fontweight='bold',
+        pad=18,
+    )
+
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_xlim(-0.6, columns - 0.4)
+    ax.set_ylim(-rows + 0.4, 0.8)
+    ax.set_frame_on(False)
+
+    # Legends for report clarity
+    from matplotlib.lines import Line2D
+    edge_legend = [
+        Line2D([0], [0], color='#16A34A', lw=3, label='Edge color: fast transition (<10s pause)'),
+        Line2D([0], [0], color='#F59E0B', lw=3, label='Edge color: medium pause (10-30s)'),
+        Line2D([0], [0], color='#DC2626', lw=3, label='Edge color: long pause (>30s)'),
+        Line2D([0], [0], color='#334155', lw=5, label='Edge width: transition frequency'),
+        Line2D([0], [0], marker='o', color='w', markerfacecolor='#93C5FD', markeredgecolor='#1D4ED8', markersize=12, label='Node size: action frequency')
+    ]
+    ax.legend(handles=edge_legend, loc='upper right', fontsize=8, frameon=True)
+
+    # Colorbar for node color encoding
+    sm = plt.cm.ScalarMappable(cmap='YlOrRd', norm=plt.Normalize(vmin=0, vmax=max_node_pause))
+    sm.set_array([])
+    cbar = plt.colorbar(sm, ax=ax, fraction=0.02, pad=0.01)
+    cbar.set_label('Node color: avg post-action pause (s)', fontsize=8)
+
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    print(f"✓ Linear flow saved to {output_path}")
+    plt.close()
+
+
 def save_graph_data(G, output_path='../outputs/graphs/motion_graph.pkl'):
     """Save graph object for later use"""
     with open(output_path, 'wb') as f:
@@ -199,15 +407,17 @@ def main():
     # Load data
     data = load_hd_epic_data('..')
     
-    # Load recipe selection
-    with open('../outputs/selected_recipe.json', 'r') as f:
-        recipe_info = json.load(f)
+    # Load recipe selection outputs
+    recipe_info, recipe_narrations = load_selected_recipe_files('../outputs')
+    recipe_id = recipe_info['recipe_id']
+    recipe_name = recipe_info.get('recipe_data', {}).get('name', 'Unknown Recipe')
     
-    recipe_narrations = pd.read_pickle('../outputs/recipe_narrations.pkl')
-    
-    print(f"\nAnalyzing recipe: {recipe_info['recipe_id']}")
+    print(f"\nAnalyzing recipe: {recipe_id} ({recipe_name})")
     print(f"Videos: {len(recipe_info['video_ids'])}")
     print(f"Actions: {recipe_info['narrations_count']}")
+
+    motion_graph_img = f'../outputs/figures/motion_graph_{recipe_id}.png'
+    linear_flow_img = f'../outputs/figures/motion_graph_linear_{recipe_id}.png'
     
     # Build graph
     G = build_motion_graph(
@@ -217,7 +427,24 @@ def main():
     )
     
     # Visualize
-    visualize_motion_graph(G)
+    visualize_motion_graph(G, recipe_id, recipe_name, output_path=motion_graph_img)
+
+    # Also create a sequence-first view for reports
+    sequence_video_id, ordered_steps, node_counts, transition_counts, node_avg_pause = extract_ordered_actions(
+        recipe_narrations,
+        data['verb_classes'],
+        data['noun_classes']
+    )
+    visualize_linear_flow(
+        ordered_steps,
+        sequence_video_id,
+        recipe_id,
+        recipe_name,
+        node_counts,
+        transition_counts,
+        node_avg_pause,
+        output_path=linear_flow_img
+    )
     
     # Save
     save_graph_data(G)
