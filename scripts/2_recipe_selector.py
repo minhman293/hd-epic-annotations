@@ -61,7 +61,7 @@ def select_recipe(recipes, recipe_timestamps, narrations):
         )
     
     # Auto-select simplest recipe based on fewest videos, actions, then steps
-    selected_row = recipe_df.iloc[0]
+    selected_row = recipe_df.iloc[1]       # Change idx to select different recipe from the list
     selected_recipe_id = selected_row['recipe_id']
     
     print(f"\n" + "="*80)

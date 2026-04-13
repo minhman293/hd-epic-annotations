@@ -1,0 +1,583 @@
+{
+  "recipe_id": "P08_R02",
+  "recipe_data": {
+    "participant": "P08",
+    "name": "Chopped Salad and Bread",
+    "type": "online",
+    "source": "https://kalejunkie.com/10-minute-crazy-good-italian-chopped-salad/",
+    "steps": {
+      "P08_R02_S01": "To make this salad, start by preparing the dressing. Whisk the dressing ingredients together, in a small bowl, until they're fully combined. Taste and add additional seasonings, if desired.",
+      "P08_R02_S02": "Next, chop your cucumbers, cherry tomatoes, carrot, coriander, and red onion, and add them to a large bowl alongside the beans and diced tomatoes.",
+      "P08_R02_S03": "Toss to combine, then pour the dressing on top and toss once more until the salad ingredients are fully coated in the dressing.",
+      "P08_R02_S04": "Slice piece of sourdough bread and place on side of bowl.",
+      "P08_R02_S05": "Serve immediately and enjoy!"
+    },
+    "captures": [
+      {
+        "videos": [
+          "P08-20240613-123547"
+        ],
+        "ingredients": {
+          "P08_R02_I01": {
+            "name": "rocket",
+            "amount": 24,
+            "amount_unit": "g",
+            "calories": 5,
+            "fat": 0.1,
+            "carbs": 0.4,
+            "protein": 0.9,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 87.0,
+                "end": 103.99
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 87.025,
+                "end": 98.045
+              }
+            ]
+          },
+          "P08_R02_I02": {
+            "name": "cucumber",
+            "amount": 77,
+            "amount_unit": "g",
+            "calories": 12,
+            "fat": 0.1,
+            "carbs": 2.8,
+            "protein": 0.5,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 164.01,
+                "end": 166.076
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 213.093,
+                "end": 231.029
+              }
+            ]
+          },
+          "P08_R02_I03": {
+            "name": "cherry tomatoes",
+            "amount": 3,
+            "amount_unit": "quantity",
+            "calories": 11,
+            "fat": 0,
+            "carbs": 2,
+            "protein": 0,
+            "weigh": [],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 268.048,
+                "end": 270.051
+              }
+            ]
+          },
+          "P08_R02_I04": {
+            "name": "carrots",
+            "amount": 34,
+            "amount_unit": "g",
+            "calories": 14,
+            "fat": 0.1,
+            "carbs": 3.3,
+            "protein": 0.3,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 287.042,
+                "end": 288.092
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 364.017,
+                "end": 366.073
+              }
+            ]
+          },
+          "P08_R02_I05": {
+            "name": "mixed seeds",
+            "amount": 3.5,
+            "amount_unit": "tsp",
+            "calories": 32,
+            "fat": 2,
+            "carbs": 1,
+            "protein": 2,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 399.019,
+                "end": 415.99
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 400.098,
+                "end": 415.99
+              }
+            ]
+          },
+          "P08_R02_I06": {
+            "name": "coriander",
+            "amount": 4,
+            "amount_unit": "g",
+            "calories": 1,
+            "fat": 0,
+            "carbs": 0.3,
+            "protein": 0.1,
+            "weigh": [],
+            "add": []
+          },
+          "P08_R02_I07": {
+            "name": "red onions",
+            "amount": 28,
+            "amount_unit": "g",
+            "calories": 4,
+            "fat": 0.1,
+            "carbs": 1.1,
+            "protein": 0.1,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 509.02,
+                "end": 510.076
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 555.016,
+                "end": 558.077
+              }
+            ]
+          },
+          "P08_R02_I08": {
+            "name": "mixed bean salad",
+            "amount": 89,
+            "amount_unit": "g",
+            "calories": 64,
+            "fat": 0,
+            "carbs": 10.4,
+            "protein": 3.7,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 597.098,
+                "end": 609.99
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 630.066,
+                "end": 634.001
+              }
+            ]
+          },
+          "P08_R02_I09": {
+            "name": "olive oil",
+            "amount": 3,
+            "amount_unit": "tbsp",
+            "calories": 378,
+            "fat": 42,
+            "carbs": 0,
+            "protein": 0,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 656.038,
+                "end": 669.002
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 656.038,
+                "end": 669.002
+              }
+            ]
+          },
+          "P08_R02_I10": {
+            "name": "balsamic glaze",
+            "amount": 1,
+            "amount_unit": "tbsp",
+            "calories": 35,
+            "fat": 0,
+            "carbs": 8,
+            "protein": 0.2,
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 736.063,
+                "end": 740.059
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 740.04,
+                "end": 741.053
+              }
+            ]
+          },
+          "P08_R02_I11": {
+            "name": "salt",
+            "amount": 0.25,
+            "amount_unit": "tsp",
+            "calories": 0,
+            "fat": 0,
+            "carbs": 1,
+            "protein": 0,
+            "weigh": [],
+            "add": []
+          },
+          "P08_R02_I12": {
+            "name": "black pepper",
+            "amount": 0.25,
+            "amount_unit": "tsp",
+            "calories": 0,
+            "fat": 0,
+            "carbs": 1,
+            "protein": 0,
+            "weigh": [],
+            "add": []
+          },
+          "P08_R02_I13": {
+            "name": "oregano",
+            "amount": 0.25,
+            "amount_unit": "tsp",
+            "calories": 0,
+            "fat": 0,
+            "carbs": 0,
+            "protein": 0,
+            "weigh": [],
+            "add": []
+          },
+          "P08_R02_I14": {
+            "name": "sourdough baguette",
+            "amount": 29,
+            "amount_unit": "g",
+            "calories": "N/A",
+            "fat": "N/A",
+            "carbs": "N/A",
+            "protein": "N/A",
+            "weigh": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 930.057,
+                "end": 932.019
+              }
+            ],
+            "add": [
+              {
+                "video": "P08-20240613-123547",
+                "start": 967.097,
+                "end": 968.059
+              }
+            ]
+          }
+        },
+        "step_times": {
+          "P08_R02_S01": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 86.709,
+              "end": 97.709
+            }
+          ],
+          "P08_R02_S02": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 174.631,
+              "end": 229.631
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 248.053,
+              "end": 270.271
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 317.546,
+              "end": 366.412
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 400.646,
+              "end": 405.506
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 413.92,
+              "end": 415.271
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 468.037,
+              "end": 481.693
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 526.928,
+              "end": 557.209
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 630.566,
+              "end": 634.037
+            }
+          ],
+          "P08_R02_S03": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 657.568,
+              "end": 667.912
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 739.678,
+              "end": 742.068
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 777.975,
+              "end": 780.74
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 791.334,
+              "end": 794.131
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 803.639,
+              "end": 828.475
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 960.488,
+              "end": 967.068
+            }
+          ],
+          "P08_R02_S04": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 918.443,
+              "end": 923.959
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 967.686,
+              "end": 968.639
+            }
+          ],
+          "P08_R02_S05": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 1003.578,
+              "end": 1006.044
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 968.598,
+              "end": 969.753
+            }
+          ]
+        },
+        "prep_times": {
+          "P08_R02_S01": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 13.818,
+              "end": 32.412
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 51.709,
+              "end": 55.225
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 73.631,
+              "end": 86.631
+            }
+          ],
+          "P08_R02_S02": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 16.85,
+              "end": 32.475
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 36.568,
+              "end": 42.881
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 43.792,
+              "end": 51.725
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 111.974,
+              "end": 116.303
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 143.428,
+              "end": 165.381
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 173.593,
+              "end": 174.631
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 231.661,
+              "end": 234.521
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 244.943,
+              "end": 248.053
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 274.874,
+              "end": 275.85
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 279.49,
+              "end": 287.35
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 292.396,
+              "end": 316.162
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 392.599,
+              "end": 400.631
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 420.418,
+              "end": 421.975
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 450.225,
+              "end": 454.506
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 466.133,
+              "end": 468.037
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 484.287,
+              "end": 486.068
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 501.027,
+              "end": 509.209
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 515.068,
+              "end": 526.912
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 562.571,
+              "end": 563.928
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 595.489,
+              "end": 608.193
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 629.473,
+              "end": 630.473
+            }
+          ],
+          "P08_R02_S03": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 638.248,
+              "end": 657.553
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 731.207,
+              "end": 739.678
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 776.803,
+              "end": 777.975
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 790.347,
+              "end": 791.334
+            }
+          ],
+          "P08_R02_S04": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 890.162,
+              "end": 892.381
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 914.725,
+              "end": 918.443
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 946.975,
+              "end": 953.396
+            }
+          ],
+          "P08_R02_S05": [
+            {
+              "video": "P08-20240613-123547",
+              "start": 956.3,
+              "end": 959.303
+            },
+            {
+              "video": "P08-20240613-123547",
+              "start": 1006.062,
+              "end": 1009.211
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "video_ids": [
+    "P08-20240613-123547",
+    "P08-20240613-123547",
+    "P08-20240613-123547"
+  ],
+  "narrations_count": 221
+}
