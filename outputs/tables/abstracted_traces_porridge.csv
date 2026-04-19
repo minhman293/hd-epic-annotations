@@ -1,0 +1,592 @@
+video_id,action,start,end,high_level_step_id,high_level_step_label,assignment_method,recipe_id
+P05-20240424-085204,open(drawer),12.14,13.6,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,take(scale),14.11,14.56,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,close(drawer),14.66,15.15,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,put(scale),17.04,19.04,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,take(bowl),20.47,22.0,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,flip(bowl),21.78,22.41,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,put(bowl),23.04,24.36,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,turn-on(scale),24.36,25.48,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,take(oatmeal),28.2,30.03,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,open(top),30.31,32.65,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,check(oatmeal),30.55,33.42,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,pour(oatmeal),33.2,37.71,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,shake(oatmeal),37.65,52.88,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,put(oatmeal),53.44,54.05,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,put(oatmeal),54.45,55.75,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,open(fridge),56.19,57.13,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,take(milk),57.68,59.23,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,close(fridge),59.74,60.22,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,turn-on(lid),60.72,61.59,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,pour(milk),61.81,68.85,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,screw(milk),69.98,71.46000000000001,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,open(fridge),71.46000000000001,72.74,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,put(bottle),72.61,73.72,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,take(glass),74.87,76.65,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,turn-on(tap),76.75,78.61,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,turn-off(tap),78.63,80.95,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,pour(water),81.03,88.8,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,reach(scale),87.97,91.02,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,put(glass),91.03,92.18,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,take(oatmeal),92.09,94.02,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,move(cup),93.91,95.17,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,move(teapot),95.13,97.26,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,open(microwave),97.61,98.32,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,move(oatmeal),98.56,99.37,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,put(oatmeal),99.11,101.71,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,press(watch),101.84,102.57,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,press(alarm),102.71,104.97,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240424-085204,take(lid),111.32,111.74,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,put(lid),112.14,115.57,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,take(spreads),115.87,116.73,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,open(cupboard),120.82,121.12,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,open(cupboard),121.35,122.59,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,put(spreads),122.69,124.99,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,close(cupboard),125.09,126.39,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,turn-off(scale),128.11,129.11,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,take(plate),132.71,134.79,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,turn-on(tap),134.56,136.5,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,wash(cloth),136.6,139.81,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,turn-off(tap),139.9,141.24,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,apply(cloth),142.94,144.79,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,take(glass),145.06,145.9,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,wash(top),146.0,147.38,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,slide(top),147.48,149.32,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,slide(top),149.42000000000002,150.98,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,squeeze(cloth),151.07999999999998,152.69,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,put(glass),152.79,153.96,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,hold(hand),153.92000000000002,154.8,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240424-085204,take(cloth),154.9,156.42000000000002,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,wash(top),162.42000000000002,165.0,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,open(bin),165.64,167.51,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,turn-on(tap),169.6,170.02,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,wash(hand),170.49,172.34,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,put(cloth),172.88,173.82999999999998,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,wash(hand),174.32999999999998,175.5,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,turn-off(tap),175.87,176.14,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,take(glass),180.49,181.16,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,carry(glass),181.57,184.28,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,pour(water),184.48,185.96,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,put(glass),186.6,187.23,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,move(glass),190.09,192.1,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,take(glass),190.13,190.89,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,drink(water),192.05,198.0,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,put(glass),198.31,202.13,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,take(plate),205.24,206.94,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,put(plate),208.32,209.59,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,turn-on(scale),210.01,210.76,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,take(banana),212.5,213.34,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,put(banana),214.74,215.68,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,turn-off(scale),217.6,218.79,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,take(banana),218.89,219.74,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,open(drawer),220.3,221.55,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,take(knife),221.65,222.61,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,press(drawer),222.71,223.01,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,take(banana),223.95,224.74,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,pat(banana),225.27,225.52,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,peel(skin),225.73,231.46,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,take(lid),231.9,232.71,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,put(skin),232.65,233.43,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,close(lid),233.46,233.86,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,put(banana),237.09,237.39,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,cut(banana),237.46,244.44,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-085204,put(knife),246.57,247.3,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,turn-on(tap),248.94,249.89,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,wash(hand),249.71,250.92,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-085204,turn-off(tap),250.94,251.69,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240424-085204,dry(hand),252.27,253.19,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240424-085204,open(drawer),253.85,255.26,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240424-085204,take(spoon),258.94,259.31,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,close(drawer),259.17,260.24,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,open(microwave),260.3,260.98,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,take(bowl),262.02,263.71,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,put(bowl),264.07,264.94,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,mix(oatmeal),265.19,269.81,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,shake(oatmeal),269.8,273.83,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-085204,put(spoon),275.43,276.64,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240424-090812,close(cupboard),2.77,3.35,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240424-090812,take(spoon),7.18,8.06,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240424-090812,mix(oatmeal),9.46,15.2,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,pat(spoon),15.04,16.98,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,put(oatmeal),17.05,18.73,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,close(cupboard),19.36,20.67,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,press(button),20.77,21.94,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,put(spoon),22.89,23.91,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,move(oatmeal),29.92,31.18,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,take(package),32.56,33.47,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,put(nut),34.2,35.54,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,take(package),35.64,38.28,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,put(package),38.38,40.68,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,look(microwave),76.53,79.07,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,open(cupboard),79.17,82.55,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,take(bowl),82.47,85.56,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,put(oatmeal),85.66,87.41,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,take(spoon),87.51,92.39,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,shake(oatmeal),92.22,95.71,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240424-090812,eat(spoon),95.81,96.72,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,put(spoon),96.95,97.73,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,turn-on(scale),98.45,99.8,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,take(bag),103.1,103.59,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,pour(raisin),104.34,109.35,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,put(bag),111.72,112.5,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,take(bag),113.34,113.99,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,move(bag),114.49,115.25,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,set(scale),117.13,117.91,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,put(nut),117.96,128.12,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,put(bag),129.89,130.41,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,set(scale),132.76,134.09,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,take(knife),135.15,136.52,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,add(banana),137.04,139.69,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240424-090812,put(plate),140.0,141.61,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,turn-off(scale),142.45,143.9,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,move(bowl),144.26,145.84,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,move(spoon),145.94,146.63,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,put(knife),148.01,148.47,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,move(spoon),148.61,149.73,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,open(drawer),153.37,154.28,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,add(scale),154.17000000000002,155.69,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,close(drawer),155.56,156.18,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240424-090812,take(oatmeal),158.47,159.69,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(bowl),9.04,11.61,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(bowl),12.42,13.04,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,open(drawer),15.85,16.93,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,take(scale),17.48,18.14,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,close(drawer),18.24,18.64,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(scale),20.56,21.62,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,take(bowl),21.63,22.12,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(bowl),22.06,22.67,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,turn-on(scale),23.08,25.56,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,take(package),29.22,31.69,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,pull(oatmeal),31.78,37.12,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,shake(bag),35.05,43.75,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(package),43.69,45.98,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(oatmeal),45.99,48.25,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,open(fridge),47.76,49.62,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,take(milk),49.61,52.06,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,unscrew(top),51.72,53.47,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,pour(milk),53.45,60.27,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,screw(lid),60.37,61.55,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,open(cupboard),61.43,62.79,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(bottle),62.74,63.97,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,open(cupboard),64.66,65.47,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,take(glass),65.5,67.32,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,turn-on(tap),68.11,69.44,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,fill(glass),69.41,70.7,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,turn-off(tap),71.2,74.15,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,pour(water),75.59,77.7,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(glass),79.47,83.78999999999999,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,take(oatmeal),84.46000000000001,85.26,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,open(microwave),85.78,87.07,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,move(oatmeal),85.81,86.94,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,put(oatmeal),87.17,89.78999999999999,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,close(cupboard),89.83,90.64,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,press(button),90.65,93.3,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240425-082420,turn-off(scale),93.88,95.38,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240425-082420,take(glass),97.42,98.42,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240425-082420,drink(water),98.52,104.02,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240425-082420,put(glass),104.12,106.06,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(package),110.02,113.66,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,move(package),113.66,115.92,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(plate),118.25,121.95,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(plate),122.04,123.8,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(plate),123.22,124.19,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(plate),124.12,125.56,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(banana),125.39,128.65,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(banana),128.69,130.44,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,open(drawer),131.29,132.64,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(knife),132.51,133.78,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,close(cupboard),133.84,134.59,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,screw(banana),134.69,138.94,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,cut(rest),135.62,137.95,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,flip(banana),137.85,144.52,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,pull(banana),144.36,145.55,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,peel(skin),146.2,147.91,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(banana),148.1,148.7,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(skin),148.8,150.0,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(skin),151.51,152.42000000000002,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,move(skin),152.85,156.81,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(banana),156.7,157.1,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(lid),157.12,157.7,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(banana),161.14,162.25,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,take(banana),162.18,163.39,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,open(bin),163.09,164.3,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,throw(banana),164.31,164.73,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,cut(banana),164.82999999999998,176.11,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-082420,put(knife),176.06,179.56,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,turn-on(tap),187.35,188.65,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,wash(hand),188.72,190.63,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,turn-off(tap),190.66,191.86,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,shake(water),191.85,192.72,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,dry(hand),192.75,195.34,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(bottle),195.22,196.25,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(lid),196.22,197.26,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,shake(bottle),197.36,199.35,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,put(bottle),199.35,200.5,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(cup),200.47,201.5,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,put(cup),201.45,203.29,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(glass),203.39,204.35,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,move(glass),204.34,206.04,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(heat),205.85,207.05,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,shake(water),206.76,208.18,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,take(lid),209.77,210.7,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,screw(lid),210.76,213.61,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-082420,put(heat),213.6,215.71,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(bottle),215.81,217.05,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,shake(water),217.13,218.96,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(bottle),218.24,222.02,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(cutlery),221.96,224.88,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,open(drawer),224.93,226.64,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(knife),226.55,227.59,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(cutlery),227.6,230.23,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(spoon),230.97,231.92,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(fork),232.02,233.02,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(cutlery),233.12,234.94,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(spoon),235.04,236.17,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(fork),236.25,237.16,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(cutlery),237.26,239.28,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(fork),239.38,240.87,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(spoon),240.95,241.63,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(spoon),241.65,243.46,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(cutlery),244.41,245.34,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,put(spoon),245.87,246.43,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,pull(drawer),246.4,247.25,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,take(spoon),247.18,249.12,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-082420,close(drawer),249.22,250.59,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,move(teapot),250.96,252.46,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,open(cupboard),252.06,253.04,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,take(oatmeal),253.93,255.23,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,put(oatmeal),255.33,256.02,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,mix(oatmeal),256.12,258.86,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,shake(liquid),258.85,259.98,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,take(oatmeal),260.08,260.73,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,put(oatmeal),260.83,261.63,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,close(cupboard),262.28,263.43,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,press(button),263.39,264.63,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,put(spoon),264.5,267.03,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,open(cupboard),294.6,295.84000000000003,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,take(oatmeal),295.83,298.54,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,put(oatmeal),299.0,300.75,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-082420,close(cupboard),301.0,302.41,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-083515,close(cupboard),4.58,5.48,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-083515,take(spoon),6.8,7.56,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-083515,mix(oatmeal),7.66,14.33,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,shake(oatmeal),14.4,16.22,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,eat(spoon),16.32,17.61,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,put(spoon),17.59,18.5,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,take(bowl),18.59,19.66,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,open(cupboard),20.5,21.5,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,put(oatmeal),21.6,23.36,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,close(cupboard),23.36,23.97,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,press(button),24.04,24.76,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,take(glass),28.53,28.73,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,turn-on(tap),30.77,33.0,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,turn-off(tap),32.81,34.3,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,drink(glass),34.84,41.86,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,move(glass),42.38,42.94,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,put(water),42.86,43.45,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,move(glass),43.55,44.23,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,put(glass),46.79,47.45,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,check(microwave),53.15,77.59,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,open(cupboard),77.12,78.68,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,finish(cupboard),78.61,79.3,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,take(oatmeal),79.23,82.92,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,put(oatmeal),82.5,87.24,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,take(spoon),87.2,88.08,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,mix(oatmeal),88.11,94.93,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,shake(oatmeal),94.97,98.68,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240425-083515,eat(spoon),98.67,100.49,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-083515,put(spoon),100.55,102.29,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240425-083515,turn-on(scale),123.54,125.39,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-083515,take(plate),124.62,126.59,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",nearest,P05_R02
+P05-20240425-083515,take(spoon),127.21,127.91,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,scrape(banana),127.79,133.46,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(plate),133.56,135.35,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,turn-off(scale),135.45,136.49,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,move(knife),136.52,137.03,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(package),137.69,138.31,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,turn-on(scale),139.17000000000002,140.11,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,pour(raisin),140.14,147.57,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(raisin),148.61,153.13,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(nut),153.63,155.16,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,set(scale),155.26,156.9,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,pour(nut),157.0,167.64,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(nut),169.28,172.15,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,turn-off(scale),173.71,175.1,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(bowl),175.2,176.28,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(bowl),176.38,177.05,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(scale),177.15,177.98,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,open(drawer),179.7,181.0,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(scale),181.1,182.34,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,close(drawer),181.94,182.63,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,close(cupboard),185.6,186.85,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,finish(alarm),187.21,188.09,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(knife),189.11,189.54,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(knife),190.4,190.91,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(spoon),191.59,192.56,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(bowl),192.57,193.61,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(bowl),193.59,194.15,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,put(spoon),194.22,195.05,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240425-083515,take(plate),194.95,195.9,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-085333,close(cupboard),1.98,4.4,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(chair),3.75,5.27,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(chair),5.37,6.48,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,screw(chair),6.53,7.54,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,crush(dough),7.55,8.69,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(bowl),11.38,12.85,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(bowl),12.8,14.32,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,open(drawer),16.03,17.71,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(scale),17.17,20.01,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,close(drawer),19.77,21.36,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,turn-on(scale),24.13,24.85,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(bowl),24.95,25.53,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(scale),25.46,26.58,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(bowl),26.63,29.35,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,turn-off(scale),28.36,30.94,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,turn-on(scale),30.9,32.16,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(oatmeal),32.22,35.05,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,move(oatmeal),35.05,36.03,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(package),36.03,37.12,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(raisin),37.19,37.84,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,pour(oatmeal),41.46,51.43,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(oatmeal),53.43,54.82,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,open(cupboard),55.32,56.05,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(milk),56.37,58.04,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,close(cupboard),58.68,59.35,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,unscrew(top),59.42,60.8,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,pour(milk),60.99,69.84,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,screw(lid),70.23,71.71000000000001,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,open(cupboard),71.76,72.53999999999999,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(milk),72.55,73.55,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,close(cupboard),73.49,74.21000000000001,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(glass),74.31,76.05,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,move(glass),76.15,76.51,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,turn-on(tap),76.58,78.24,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,turn-off(tap),78.34,79.8,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,pour(water),81.05,84.69,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(glass),84.72,85.91,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,take(bowl),85.97,87.16,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,move(oatmeal),87.26,88.82,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,move(glass),88.92,90.28,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,open(cupboard),90.48,91.24,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,move(oatmeal),91.21,92.03,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,open(cupboard),92.1,92.96,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,put(oatmeal),93.06,94.57,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,close(cupboard),94.67,95.46,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,press(button),95.56,97.78,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,overlap,P05_R02
+P05-20240426-085333,open(cupboard),100.23,101.27,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(drawer),104.8,106.05,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(cutlery),106.79,110.47,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(cutlery),111.5,115.39,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,close(drawer),115.48,117.63,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(ladle),117.53,118.86,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(bowl),118.96,120.42,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,close(drawer),120.48,121.56,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(drawer),121.61,122.65,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(bowl),122.59,125.83,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(bowl),125.93,127.23,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,move(bowl),127.33,129.26,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(bin),128.95,130.06,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,throw(rubbish),130.03,130.9,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(rubbish),134.88,135.65,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(bin),136.32,136.86,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,throw(rubbish),136.89,137.24,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(drawer),137.85,138.61,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(bowl),138.7,139.55,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(cutlery),140.71,142.16,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(drawer),142.66,143.6,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(cutlery),143.67000000000002,144.53,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(glass),145.78,146.32999999999998,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,close(drawer),146.37,147.74,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,open(drawer),147.79,148.31,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(glass),148.32999999999998,149.55,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(plate),149.65,151.22,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,close(drawer),151.32,151.57,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,move(plate),151.67000000000002,153.49,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,turn-off(scale),155.01,156.76,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(package),156.86,158.75,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,move(package),158.57,160.47,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(lid),160.57,163.16,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(lid),163.26,164.96,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,wrap(clothes),165.13,166.82999999999998,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(bowl),166.93,169.04,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,close(drawer),169.14,170.39,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(bowl),170.18,171.89,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(package),171.97,173.17000000000002,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(bowl),173.27,175.07999999999998,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,take(lid),175.15,176.39,P05_R02_S01,Put the oats in a bowl with the milk and 300ml/10 1/2 fl oz water. Microwave until hot.,nearest,P05_R02
+P05-20240426-085333,put(lid),176.46,178.13,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(board:chopping),178.11,179.72,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,move(board:chopping),179.57999999999998,183.12,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,move(hand),181.06,182.98,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(board:chopping),183.62,184.38,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,put(board:chopping),185.31,188.46,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(cup),190.1,190.67,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,close(drawer),190.98,192.1,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,open(drawer),191.81,193.21,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,put(cup),193.01,194.08,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(cup),195.97,196.62,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,put(cup),197.33,198.39,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(cup),199.49,200.06,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,put(cup),200.18,201.88,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(bowl),201.64,203.24,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,move(bowl),203.21,204.49,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(cup),204.25,205.85,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,move(cup),205.66,208.04,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,adjust(cup),207.53,209.3,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(plate),209.15,210.51,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,move(plate),210.46,211.32,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(plate),211.33,214.3,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(plate),214.22,215.67,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(plate),215.39,216.58,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(board:chopping),216.62,218.89,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,shake(water),218.99,220.46,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,open(drawer),220.04,222.05,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,put(board:chopping),221.99,223.85,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,close(drawer),223.9,225.37,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,dry(hand),225.38,229.9,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(knife),230.0,230.96,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(knife),231.06,232.76,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,open(drawer),235.03,238.23,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,put(knife),239.51,243.29,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,close(drawer),243.45,244.75,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,close(cupboard),248.67,250.95,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,open(drawer),251.0,252.01,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,take(spoon),252.37,253.87,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-085333,close(drawer),254.12,255.02,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(microwave),255.33,255.9,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,move(spoon),256.05,256.59,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(cupboard),256.68,257.55,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,mix(oatmeal),257.86,260.14,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,shake(oatmeal),259.76,261.99,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,close(cupboard),261.98,262.63,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,eat(spoon),262.59,263.55,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,add(alarm),263.52,264.91,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(plate),264.96,267.24,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(plate),266.89,269.01,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(glass),268.95,270.17,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,drink(water),270.21,276.8,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(glass),276.67,279.09000000000003,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(banana),281.1,283.36,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,break(banana),287.24,288.86,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(banana),288.92,290.5,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,move(leaf),290.5,291.26,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,move(spoon),292.37,294.4,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(cupboard),295.24,297.22,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(knife),297.32,299.11,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,close(drawer),299.21,300.33,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,move(knife),299.88,300.59,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(banana),301.1,302.58,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,cut(rest),302.6,305.77,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,peel(skin),304.98,307.31,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,cut(rest),307.04,310.83,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,peel(skin),309.95,313.39,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(banana),313.33,314.09,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(skin),314.19,315.25,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,move(skin),315.35,315.79,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(knife),315.89,316.27,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(lid),319.84,320.23,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,throw(skin),320.54,320.82,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,close(lid),320.92,321.39,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(spoon),325.0,326.34,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(microwave),326.44,327.35,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,mix(oatmeal),327.38,329.9,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,shake(oatmeal),330.0,332.17,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,close(cupboard),332.27,333.21,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,add(alarm),333.28,334.59000000000003,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,eat(spoon),334.69,335.79,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(spoon),335.84000000000003,337.88,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(banana),337.87,338.18,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,cut(banana),338.28,340.25,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(knife),351.32,354.53,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,turn-on(tap),355.09000000000003,356.25,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,wash(hand),356.35,357.38,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,turn-off(tap),357.48,358.43,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,shake(hand),358.53,359.42,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,dry(hand),359.46,361.4,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(knife),371.38,372.28,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(cupboard),372.38,375.44,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,pull(drawer),375.42,376.52,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(knife),376.62,377.51,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,close(drawer),376.8,377.49,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,close(cupboard),377.59,378.93,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,add(alarm),380.97,381.85,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(spoon),408.83,410.02,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,move(spoon),410.12,410.61,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,open(cupboard),411.18,411.95,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(oatmeal),413.86,415.67,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(oatmeal),415.77,416.47,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,mix(oatmeal),416.77,423.94,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,shake(oatmeal),424.0,424.95,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,take(bowl),424.63,426.09,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(bowl),426.19,428.53,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,shake(oatmeal),428.63,429.72,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,eat(spoon),429.72,430.84,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-085333,put(spoon),430.74,431.96,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-091011,close(cupboard),2.95,3.91,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-091011,take(spoon),6.05,6.85,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-091011,mix(oatmeal),6.95,15.46,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,shake(oatmeal),15.56,16.72,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,eat(oatmeal),16.82,17.79,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,put(spoon),17.89,18.41,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,take(bowl),18.48,19.41,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,put(oatmeal),20.53,21.7,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,close(cupboard),21.8,22.2,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,remove(alarm),22.3,24.21,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,turn-on(microwave),22.52,24.66,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,add(alarm),24.76,28.16,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,take(package),40.28,42.6,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,put(package),42.6,44.25,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,take(package),44.35,46.3,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,put(package),46.26,48.44,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,take(package),48.53,51.89,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,flip(package),51.99,53.54,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,put(package),53.64,56.86,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,take(spoon),73.49,91.57,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,open(cupboard),95.64,98.09,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,take(bowl),97.6,100.36,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,put(bowl),100.44,102.52,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,mix(oatmeal),102.54,106.72,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-091011,shake(oatmeal),106.74,109.06,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-091011,eat(spoon),109.09,110.59,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-091011,put(spoon),110.55,111.69,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-092000,close(cupboard),2.08,3.15,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-092000,take(spoon),4.32,5.68,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-092000,mix(oatmeal),5.78,9.4,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-092000,take(bowl),9.33,9.79,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-092000,put(bowl),9.87,10.55,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",overlap,P05_R02
+P05-20240426-092000,turn-on(scale),10.65,11.88,P05_R02_S02,"Leave for a few minutes, stir, then microwave for a further minute.",nearest,P05_R02
+P05-20240426-092000,lift(plate),11.98,12.47,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(spoon),12.57,14.75,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,eat(spoon),14.85,16.37,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,turn-on(scale),16.47,17.83,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,scrape(banana),20.41,24.71,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(spoon),24.47,26.86,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(package),26.66,28.75,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,pour(raisin),28.65,31.13,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,shake(bag),30.8,32.96,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,fold(bag),32.43,34.9,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(bag),34.69,35.98,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(package),36.06,36.96,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,remove(rubber),36.96,39.72,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,open(package),39.77,42.85,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,cut(hand),44.47,46.51,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,pour(raisin),46.61,51.92,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,wrap(rubber),52.02,59.58,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(rest),59.68,64.31,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(raisin),64.41,65.44,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(nut),65.54,66.98,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,press(scale),67.08,68.78,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,pour(corn),68.88,72.74,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,squeeze(package),72.49,79.3,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,pull(food),78.3,79.55,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,shake(corn),79.84,80.92,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(nut),81.02,82.58,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,turn-off(scale),83.41,85.41,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(spoon),85.51,86.78999999999999,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(bowl),86.85,87.73,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(scale),87.83,88.95,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,open(drawer),90.38,91.5,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,put(scale),91.6,91.94,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,close(drawer),91.95,92.64,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,close(cupboard),94.81,96.19,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02
+P05-20240426-092000,take(plate),96.4,97.83,P05_R02_S03,"Add chopped banana, and the raisins and pecan nuts.",overlap,P05_R02

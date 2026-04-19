@@ -1,0 +1,8 @@
+video_id,participant,deviation_type,severity,detail,action
+P05-20240424-085204,P05,ordering,moderate,"Edit distance=1, 1 swapped pairs",edit_dist=1
+P05-20240424-085204,P05,ordering_swap,moderate,P05_R02_S02 and P05_R02_S03 in reversed order vs canonical,P05_R02_S02 <-> P05_R02_S03
+P05-20240425-082420,P05,ordering,moderate,"Edit distance=1, 1 swapped pairs",edit_dist=1
+P05-20240425-082420,P05,ordering_swap,moderate,P05_R02_S02 and P05_R02_S03 in reversed order vs canonical,P05_R02_S02 <-> P05_R02_S03
+P05-20240426-085333,P05,omission,moderate,Missing from session; present in ≥50% of sessions,P05_R02_S03
+P05-20240426-085333,P05,rare_transition,low,P05_R02_S01 → P05_R02_S02 seen in only 14% of sessions,P05_R02_S01 → P05_R02_S02
+P05-20240426-091011,P05,omission,moderate,Missing from session; present in ≥50% of sessions,P05_R02_S03

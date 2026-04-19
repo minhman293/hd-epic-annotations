@@ -1,0 +1,4 @@
+action,intervention_score,omission_critical,omission_moderate,oscillation,ordering_swap,rare_transition,in_canonical_path
+P05_R02_S03,0.57,0,2,0,2,0,True
+P05_R02_S02,0.36,0,0,0,2,1,True
+P05_R02_S01,0.07,0,0,0,0,1,False

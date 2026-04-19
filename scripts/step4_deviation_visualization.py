@@ -17,6 +17,8 @@ Outputs:
 
 Usage:
   python step4_deviation_visualization.py coffee
+    python step4_deviation_visualization.py coffee --level abstracted
+    python step4_deviation_visualization.py coffee --level action
 """
 
 import sys
@@ -34,28 +36,104 @@ from collections import defaultdict, Counter
 from utils import create_output_dirs
 
 
+def normalize_safe_name(text):
+    return str(text).strip().lower().replace(' ', '_').replace(',', '')
+
+
+def parse_cli_args(argv):
+    if not argv:
+        return None, 'abstracted'
+
+    recipe_query = None
+    level = 'abstracted'
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == '--level' and i + 1 < len(argv):
+            level = argv[i + 1].strip().lower()
+            i += 2
+            continue
+        if arg.startswith('--level='):
+            level = arg.split('=', 1)[1].strip().lower()
+            i += 1
+            continue
+        if recipe_query is None and not arg.startswith('--'):
+            recipe_query = arg
+        i += 1
+
+    if level not in ('abstracted', 'action'):
+        raise ValueError("--level must be either 'abstracted' or 'action'")
+
+    return recipe_query, level
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # 4A. Load data from Steps 2 and 3
 # ─────────────────────────────────────────────────────────────────────────────
 
-def load_step2_step3_data(recipe_query, outputs_dir='../outputs'):
+def load_step2_step3_data(recipe_query, level='abstracted', outputs_dir='../outputs'):
     """Load canonical graph (Step 2) and deviation results (Step 3)."""
     outputs_path = Path(outputs_dir)
-    query = recipe_query.strip().lower().replace(' ', '_').replace(',', '')
+    query = normalize_safe_name(recipe_query)
 
     # Canonical graph
-    canon_candidates = list(outputs_path.glob(f'graphs/canonical_graph_*{query}*.pkl'))
+    canon_candidates = []
+    preferred_canon = outputs_path / f'graphs/canonical_graph_{query}_{level}.pkl'
+    if preferred_canon.exists():
+        canon_candidates = [preferred_canon]
+    else:
+        canon_candidates = list(outputs_path.glob(f'graphs/canonical_graph_*{query}*.pkl'))
+
+    filtered_canon = []
+    for c in canon_candidates:
+        try:
+            with open(c, 'rb') as f:
+                d = pickle.load(f)
+            c_level = d.get('meta', {}).get('abstraction_level')
+            if c_level is None and c.name.endswith(f'_{level}.pkl'):
+                filtered_canon.append(c)
+            elif c_level == level:
+                filtered_canon.append(c)
+        except Exception:
+            continue
+    if filtered_canon:
+        canon_candidates = filtered_canon
+
     if not canon_candidates:
-        raise FileNotFoundError(f"No canonical graph for '{recipe_query}'. Run step2 first.")
+        raise FileNotFoundError(f"No canonical graph for '{recipe_query}' at level '{level}'. Run step2 first.")
     with open(canon_candidates[0], 'rb') as f:
         canon_data = pickle.load(f)
 
     # Deviation results
-    dev_candidates = list(outputs_path.glob(f'graphs/deviation_results_*{query}*.pkl'))
+    dev_candidates = []
+    preferred_dev = outputs_path / f'graphs/deviation_results_{query}_{level}.pkl'
+    if preferred_dev.exists():
+        dev_candidates = [preferred_dev]
+    else:
+        dev_candidates = list(outputs_path.glob(f'graphs/deviation_results_*{query}*.pkl'))
+
+    filtered_dev = []
+    for c in dev_candidates:
+        try:
+            with open(c, 'rb') as f:
+                d = pickle.load(f)
+            d_level = d.get('abstraction_level')
+            if d_level is None and c.name.endswith(f'_{level}.pkl'):
+                filtered_dev.append(c)
+            elif d_level == level:
+                filtered_dev.append(c)
+        except Exception:
+            continue
+    if filtered_dev:
+        dev_candidates = filtered_dev
+
     if not dev_candidates:
-        raise FileNotFoundError(f"No deviation results for '{recipe_query}'. Run step3 first.")
+        raise FileNotFoundError(f"No deviation results for '{recipe_query}' at level '{level}'. Run step3 first.")
     with open(dev_candidates[0], 'rb') as f:
         dev_data = pickle.load(f)
+
+    canon_data.setdefault('meta', {})['abstraction_level'] = canon_data.get('meta', {}).get('abstraction_level', level)
+    dev_data['abstraction_level'] = dev_data.get('abstraction_level', level)
 
     return canon_data, dev_data
 
@@ -480,22 +558,34 @@ def visualize_deviation_overlay(G, traces, canonical_sequence, dev_results,
 def main():
     if len(sys.argv) < 2:
         print("Usage: python step4_deviation_visualization.py <recipe_name_or_id>")
+        print("       python step4_deviation_visualization.py <recipe_name_or_id> --level abstracted")
+        print("       python step4_deviation_visualization.py <recipe_name_or_id> --level action")
         sys.exit(1)
 
-    recipe_query = sys.argv[1]
+    try:
+        recipe_query, level = parse_cli_args(sys.argv[1:])
+    except ValueError as e:
+        print(f"ERROR: {e}")
+        sys.exit(1)
+
+    if not recipe_query:
+        print("ERROR: Missing recipe_name_or_id.")
+        sys.exit(1)
+
     create_output_dirs()
 
     # Load data from Steps 2 and 3
-    canon_data, dev_data = load_step2_step3_data(recipe_query)
+    canon_data, dev_data = load_step2_step3_data(recipe_query, level=level)
 
     G = canon_data['graph']
     traces = canon_data['traces']
     recipe_name = canon_data['meta']['name']
+    level = canon_data['meta'].get('abstraction_level', level)
 
     dev_results = dev_data['results']
     canonical_sequence = dev_data['canonical_sequence']
 
-    safe_name = recipe_name.lower().replace(' ', '_').replace(',', '')
+    safe_name = normalize_safe_name(recipe_name)
 
     # Compute intervention hotspots
     node_scores, edge_scores, hotspot_df = compute_intervention_hotspots(
@@ -503,12 +593,12 @@ def main():
     )
 
     # Save hotspot table
-    hotspot_path = Path(f'../outputs/tables/intervention_hotspots_{safe_name}.csv')
+    hotspot_path = Path(f'../outputs/tables/intervention_hotspots_{safe_name}_{level}.csv')
     hotspot_df.to_csv(hotspot_path, index=False)
     print(f"✓ Hotspot table saved to {hotspot_path}")
 
     # Visualize
-    fig_path = f'../outputs/figures/deviation_overlay_{safe_name}.png'
+    fig_path = f'../outputs/figures/deviation_overlay_{safe_name}_{level}.png'
     visualize_deviation_overlay(
         G, traces, canonical_sequence, dev_results,
         node_scores, edge_scores, recipe_name, fig_path

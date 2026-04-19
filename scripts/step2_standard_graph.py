@@ -17,8 +17,10 @@ Output:
   - outputs/figures/canonical_graph_{recipe_name}.png
 
 Usage:
-  python step2_canonical_graph.py "coffee"
-  python step2_canonical_graph.py "P08_R01"
+    python step2_canonical_graph.py "coffee"
+    python step2_canonical_graph.py "P08_R01"
+    python step2_canonical_graph.py "porridge" --level abstracted
+    python step2_canonical_graph.py "porridge" --level action
   (first arg = recipe name or recipe_id; matches case-insensitively)
 """
 
@@ -32,6 +34,137 @@ from pathlib import Path
 from collections import defaultdict, Counter
 from utils import (load_hd_epic_data, create_output_dirs,
                    get_action_name, get_verb_name, get_noun_name)
+
+
+def normalize_safe_name(text):
+    return str(text).strip().lower().replace(' ', '_').replace(',', '')
+
+
+def parse_cli_args(argv):
+    if not argv:
+        return None, 'abstracted'
+
+    recipe_query = None
+    level = 'abstracted'
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == '--level' and i + 1 < len(argv):
+            level = argv[i + 1].strip().lower()
+            i += 2
+            continue
+        if arg.startswith('--level='):
+            level = arg.split('=', 1)[1].strip().lower()
+            i += 1
+            continue
+        if recipe_query is None and not arg.startswith('--'):
+            recipe_query = arg
+        i += 1
+
+    if level not in ('abstracted', 'action'):
+        raise ValueError("--level must be either 'abstracted' or 'action'")
+
+    return recipe_query, level
+
+
+def _find_abstracted_trace_file(recipe_query, outputs_dir='../outputs'):
+    outputs_path = Path(outputs_dir)
+    query = normalize_safe_name(recipe_query)
+
+    candidates = list(outputs_path.glob(f'graphs/abstracted_traces_*{query}*.pkl'))
+    if not candidates:
+        candidates = list(outputs_path.glob('graphs/abstracted_traces_*.pkl'))
+        print("Available abstracted traces:")
+        for c in candidates:
+            print(f"  {c.name}")
+        raise FileNotFoundError(
+            f"No abstracted traces found for '{recipe_query}'. "
+            "Run step1_5_hierarchical_abstraction.py first."
+        )
+    return candidates[0]
+
+
+def load_abstracted_traces(recipe_query, outputs_dir='../outputs'):
+    """
+    Load Step 1.5 abstracted traces and convert them into the Step 2 trace format.
+
+    Returns:
+      traces: list of trace dicts using step IDs as sequence states
+      recipe_meta: metadata dict compatible with canonical graph downstream steps
+    """
+    pkl_path = _find_abstracted_trace_file(recipe_query, outputs_dir=outputs_dir)
+    print(f"Loading abstracted traces from: {pkl_path.name}")
+
+    with open(pkl_path, 'rb') as f:
+        data = pickle.load(f)
+
+    raw_traces = data.get('traces', [])
+    if not raw_traces:
+        raise ValueError(f"Abstracted trace file is empty: {pkl_path}")
+
+    traces = []
+    matched_names = list((data.get('matched_recipes') or {}).values())
+    recipe_name = matched_names[0] if matched_names else str(recipe_query)
+
+    for t in raw_traces:
+        video_id = t.get('video_id', '')
+        participant = str(video_id).split('-')[0] if video_id else 'UNKNOWN'
+        step_sequence = t.get('step_sequence', [])
+        if not step_sequence:
+            continue
+
+        actions = []
+        action_labels = []
+        timestamps = []
+        durations = []
+        drilldown_actions = []
+
+        for step in step_sequence:
+            step_id = step.get('step_id', '')
+            step_label = step.get('step_label', step_id)
+            start = float(step.get('start', 0.0))
+            end = float(step.get('end', start))
+            duration = float(step.get('duration', max(end - start, 0.0)))
+
+            if not step_id:
+                continue
+
+            actions.append(step_id)
+            action_labels.append(step_label)
+            timestamps.append((start, end))
+            durations.append(duration)
+            drilldown_actions.append(step.get('actions', []))
+
+        if actions:
+            traces.append({
+                'video_id': video_id,
+                'participant': participant,
+                'recipe_id': t.get('recipe_id', ''),
+                'actions': actions,
+                'action_labels': action_labels,
+                'timestamps': timestamps,
+                'durations': durations,
+                'drilldown_actions': drilldown_actions,
+                'abstraction_level': 'abstracted',
+            })
+
+    if not traces:
+        raise ValueError(f"No usable abstracted traces found in {pkl_path}")
+
+    recipe_meta = {
+        'name': recipe_name,
+        'steps': {},
+        'matched_ids': list((data.get('matched_recipes') or {}).keys()),
+        'abstraction_level': 'abstracted',
+        'source': str(pkl_path),
+    }
+
+    print(f"\nExtracted {len(traces)} abstracted traces")
+    for t in traces:
+        duration = t['timestamps'][-1][1] - t['timestamps'][0][0] if t['timestamps'] else 0.0
+        print(f"  {t['video_id']} ({t['participant']}): {len(t['actions'])} steps, {duration:.1f}s duration")
+
+    return traces, recipe_meta
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -136,8 +269,10 @@ def extract_traces(session_videos, narrations, verb_classes, noun_classes):
                     'participant': participant,
                     'recipe_id': recipe_id,
                     'actions': actions,
+                    'action_labels': actions,
                     'timestamps': timestamps,
                     'durations': durations,
+                    'abstraction_level': 'action',
                 })
 
     print(f"\nExtracted {len(traces)} traces across {len(session_videos)} recipe definition(s)")
@@ -152,7 +287,7 @@ def extract_traces(session_videos, narrations, verb_classes, noun_classes):
 # 2B. Build the canonical (directly-follows) graph
 # ─────────────────────────────────────────────────────────────────────────────
 
-def build_canonical_graph(traces):
+def build_canonical_graph(traces, abstraction_level='action'):
     """
     Construct a weighted directed graph representing the normative model.
 
@@ -180,6 +315,7 @@ def build_canonical_graph(traces):
     edge_frequency = Counter()          # Total count of each transition
     edge_trace_set = defaultdict(set)   # Which traces contain each transition
     edge_spans = defaultdict(list)      # Time span between consecutive actions
+    node_label_lookup = {}
 
     # Track first/last actions for START/END
     first_actions = Counter()
@@ -187,9 +323,13 @@ def build_canonical_graph(traces):
 
     for trace_idx, trace in enumerate(traces):
         actions = trace['actions']
+        labels = trace.get('action_labels', actions)
         timestamps = trace['timestamps']
         durations = trace['durations']
         trace_id = trace['video_id']
+
+        if len(labels) != len(actions):
+            labels = actions
 
         # Track unique actions in this trace (for trace-level counts)
         seen_in_trace = set()
@@ -197,6 +337,7 @@ def build_canonical_graph(traces):
         for i, action in enumerate(actions):
             node_frequency[action] += 1
             node_durations[action].append(durations[i])
+            node_label_lookup[action] = labels[i]
             if action not in seen_in_trace:
                 node_trace_count[action] += 1
                 seen_in_trace.add(action)
@@ -222,6 +363,7 @@ def build_canonical_graph(traces):
     # Add nodes with statistics
     for action in node_frequency:
         G.add_node(action,
+                   label=node_label_lookup.get(action, action),
                    total_count=node_frequency[action],
                    trace_count=node_trace_count[action],
                    trace_fraction=node_trace_count[action] / total_traces,
@@ -269,7 +411,8 @@ def build_canonical_graph(traces):
 
     # Report
     print(f"\nCanonical graph statistics:")
-    print(f"  Nodes (unique actions): {G.number_of_nodes() - 2} (+2 sentinels)")
+    state_name = 'steps' if abstraction_level == 'abstracted' else 'actions'
+    print(f"  Nodes (unique {state_name}): {G.number_of_nodes() - 2} (+2 sentinels)")
     print(f"  Edges (transitions):    {G.number_of_edges()}")
     print(f"  Traces used:            {total_traces}")
 
@@ -305,7 +448,7 @@ def build_canonical_graph(traces):
 # 2C. Export canonical graph statistics as tables
 # ─────────────────────────────────────────────────────────────────────────────
 
-def export_canonical_tables(G, recipe_name, output_dir='../outputs/tables'):
+def export_canonical_tables(G, recipe_name, abstraction_level='action', output_dir='../outputs/tables'):
     """Export node and edge statistics as CSV for inspection."""
     output_dir = Path(output_dir)
     safe_name = recipe_name.lower().replace(' ', '_').replace(',', '')
@@ -316,8 +459,10 @@ def export_canonical_tables(G, recipe_name, output_dir='../outputs/tables'):
         if node in ('START', 'END'):
             continue
         node_rows.append({
-            'action': node,
-            'verb': node.split('(')[0],
+            'state_id': node,
+            'state_label': data.get('label', node),
+            'abstraction_level': abstraction_level,
+            'verb': node.split('(')[0] if '(' in node else '',
             'noun': node.split('(')[1].rstrip(')') if '(' in node else '',
             'total_count': data.get('total_count', 0),
             'trace_count': data.get('trace_count', 0),
@@ -337,6 +482,9 @@ def export_canonical_tables(G, recipe_name, output_dir='../outputs/tables'):
         edge_rows.append({
             'source': u,
             'target': v,
+            'source_label': G.nodes[u].get('label', u) if u in G.nodes else u,
+            'target_label': G.nodes[v].get('label', v) if v in G.nodes else v,
+            'abstraction_level': abstraction_level,
             'frequency': data.get('frequency', 0),
             'trace_count': data.get('trace_count', 0),
             'trace_fraction': round(data.get('trace_fraction', 0), 3),
@@ -357,7 +505,7 @@ def export_canonical_tables(G, recipe_name, output_dir='../outputs/tables'):
 # 2D. Visualize the canonical graph
 # ─────────────────────────────────────────────────────────────────────────────
 
-def visualize_canonical_graph(G, recipe_name, traces, output_path):
+def visualize_canonical_graph(G, recipe_name, traces, output_path, abstraction_level='action'):
     """
     Visualize the canonical graph with:
       - Node size ∝ trace_fraction (how many sessions include this action)
@@ -417,9 +565,14 @@ def visualize_canonical_graph(G, recipe_name, traces, output_path):
     }
     DEFAULT_COLOR = '#94A3B8'
 
+    step_palette = ['#2563EB', '#0EA5E9', '#14B8A6', '#22C55E', '#EAB308', '#F97316', '#EF4444', '#8B5CF6']
+
     def get_color(node):
         if node in ('START', 'END'):
             return '#1F2937'
+        if abstraction_level == 'abstracted':
+            idx = abs(hash(node)) % len(step_palette)
+            return step_palette[idx]
         verb = node.split('(')[0].lower().strip()
         return VERB_COLORS.get(verb, DEFAULT_COLOR)
 
@@ -497,14 +650,25 @@ def visualize_canonical_graph(G, recipe_name, traces, output_path):
                                 ec='#1e293b', linewidth=edge_lw, zorder=4)
             ax.add_patch(circle)
 
-            verb = node.split('(')[0]
-            noun_part = node[len(verb):]
-            ax.text(x, y, verb, fontsize=7, fontweight='bold', color='white',
-                    ha='center', va='center', zorder=5,
-                    path_effects=[pe.withStroke(linewidth=1.5, foreground=color)])
-            ax.text(x, y - size_r - 0.18, noun_part, fontsize=6.5, color='#334155',
-                    ha='center', va='top', zorder=5,
-                    path_effects=[pe.withStroke(linewidth=2, foreground='white')])
+            if abstraction_level == 'action' and '(' in node:
+                verb = node.split('(')[0]
+                noun_part = node[len(verb):]
+                ax.text(x, y, verb, fontsize=7, fontweight='bold', color='white',
+                        ha='center', va='center', zorder=5,
+                        path_effects=[pe.withStroke(linewidth=1.5, foreground=color)])
+                ax.text(x, y - size_r - 0.18, noun_part, fontsize=6.5, color='#334155',
+                        ha='center', va='top', zorder=5,
+                        path_effects=[pe.withStroke(linewidth=2, foreground='white')])
+            else:
+                state_label = data.get('label', node)
+                short_id = node.split('_')[-1] if '_S' in node else node
+                short_label = state_label[:42] + ('...' if len(state_label) > 42 else '')
+                ax.text(x, y, short_id, fontsize=7, fontweight='bold', color='white',
+                        ha='center', va='center', zorder=5,
+                        path_effects=[pe.withStroke(linewidth=1.5, foreground=color)])
+                ax.text(x, y - size_r - 0.18, short_label, fontsize=6, color='#334155',
+                        ha='center', va='top', zorder=5,
+                        path_effects=[pe.withStroke(linewidth=2, foreground='white')])
 
             # Show trace fraction below noun
             ax.text(x, y - size_r - 0.55,
@@ -543,8 +707,8 @@ def visualize_canonical_graph(G, recipe_name, traces, output_path):
     n_traces = len(traces)
     n_participants = len(set(t['participant'] for t in traces))
     ax.set_title(
-        f'Canonical Recipe Graph: {recipe_name}\n'
-        f'{G.number_of_nodes() - 2} action states  ·  '
+        f'Canonical Recipe Graph: {recipe_name} ({abstraction_level} level)\n'
+        f'{G.number_of_nodes() - 2} {"step" if abstraction_level == "abstracted" else "action"} states  ·  '
         f'{G.number_of_edges()} transitions  ·  '
         f'{n_traces} sessions from {n_participants} participant(s)\n'
         f'Node size & border ∝ session coverage  |  Edge width ∝ frequency  |  Labels = P(transition)',
@@ -572,50 +736,71 @@ def main():
         print("Usage: python step2_canonical_graph.py <recipe_name_or_id>")
         print("Example: python step2_canonical_graph.py coffee")
         print("         python step2_canonical_graph.py P08_R01")
+        print("         python step2_canonical_graph.py porridge --level abstracted")
+        print("         python step2_canonical_graph.py porridge --level action")
         sys.exit(1)
 
-    recipe_query = sys.argv[1]
+    try:
+        recipe_query, abstraction_level = parse_cli_args(sys.argv[1:])
+    except ValueError as e:
+        print(f"ERROR: {e}")
+        sys.exit(1)
 
-    data = load_hd_epic_data('..')
+    if not recipe_query:
+        print("ERROR: Missing recipe_name_or_id.")
+        sys.exit(1)
+
     create_output_dirs()
 
-    # Find all sessions for this recipe
-    matched_ids, session_videos, recipe_meta = find_recipe_sessions(
-        recipe_query, data['recipes'], data['narrations']
-    )
-    recipe_name = recipe_meta['name']
-    safe_name = recipe_name.lower().replace(' ', '_').replace(',', '')
+    if abstraction_level == 'abstracted':
+        traces, recipe_meta = load_abstracted_traces(recipe_query)
+    else:
+        data = load_hd_epic_data('..')
+        # Find all sessions for this recipe
+        _, session_videos, recipe_meta = find_recipe_sessions(
+            recipe_query, data['recipes'], data['narrations']
+        )
+        # Extract traces
+        traces = extract_traces(
+            session_videos, data['narrations'],
+            data['verb_classes'], data['noun_classes']
+        )
+        recipe_meta['abstraction_level'] = 'action'
 
-    # Extract traces
-    traces = extract_traces(
-        session_videos, data['narrations'],
-        data['verb_classes'], data['noun_classes']
-    )
+    recipe_name = recipe_meta['name']
+    safe_name = normalize_safe_name(recipe_name)
 
     if not traces:
         print("ERROR: No traces extracted. Check video_id matching.")
         sys.exit(1)
 
     # Build canonical graph
-    G = build_canonical_graph(traces)
+    G = build_canonical_graph(traces, abstraction_level=abstraction_level)
 
     # Export tables
-    export_canonical_tables(G, recipe_name)
+    export_canonical_tables(G, recipe_name, abstraction_level=abstraction_level)
 
     # Save graph object
-    graph_path = Path(f'../outputs/graphs/canonical_graph_{safe_name}.pkl')
+    graph_path = Path(f'../outputs/graphs/canonical_graph_{safe_name}_{abstraction_level}.pkl')
     with open(graph_path, 'wb') as f:
         pickle.dump({'graph': G, 'traces': traces, 'meta': recipe_meta}, f)
     print(f"✓ Graph data saved to {graph_path}")
 
+    # Keep legacy action-level filename for backward compatibility
+    if abstraction_level == 'action':
+        legacy_graph_path = Path(f'../outputs/graphs/canonical_graph_{safe_name}.pkl')
+        with open(legacy_graph_path, 'wb') as f:
+            pickle.dump({'graph': G, 'traces': traces, 'meta': recipe_meta}, f)
+        print(f"✓ Legacy action-level graph data saved to {legacy_graph_path}")
+
     # Visualize
-    fig_path = f'../outputs/figures/canonical_graph_{safe_name}.png'
-    visualize_canonical_graph(G, recipe_name, traces, fig_path)
+    fig_path = f'../outputs/figures/canonical_graph_{safe_name}_{abstraction_level}.png'
+    visualize_canonical_graph(G, recipe_name, traces, fig_path, abstraction_level=abstraction_level)
 
     print("\n" + "=" * 80)
     print("STEP 2 COMPLETE")
     print("=" * 80)
-    print(f"\nCanonical graph for '{recipe_name}' built from {len(traces)} traces.")
+    print(f"\nCanonical graph for '{recipe_name}' built from {len(traces)} traces ({abstraction_level} level).")
     print("Next: Run step3_deviation_detection.py to detect individual deviations.")
 
 

@@ -24,6 +24,8 @@ Output:
 Usage:
   python step3_deviation_detection.py coffee
   python step3_deviation_detection.py P08_R01
+    python step3_deviation_detection.py porridge --level abstracted
+    python step3_deviation_detection.py porridge --level action
 """
 
 import sys
@@ -36,17 +38,69 @@ from collections import Counter, defaultdict
 from utils import load_hd_epic_data, create_output_dirs, get_action_name
 
 
+def normalize_safe_name(text):
+    return str(text).strip().lower().replace(' ', '_').replace(',', '')
+
+
+def parse_cli_args(argv):
+    if not argv:
+        return None, 'abstracted'
+
+    recipe_query = None
+    level = 'abstracted'
+    i = 0
+    while i < len(argv):
+        arg = argv[i]
+        if arg == '--level' and i + 1 < len(argv):
+            level = argv[i + 1].strip().lower()
+            i += 2
+            continue
+        if arg.startswith('--level='):
+            level = arg.split('=', 1)[1].strip().lower()
+            i += 1
+            continue
+        if recipe_query is None and not arg.startswith('--'):
+            recipe_query = arg
+        i += 1
+
+    if level not in ('abstracted', 'action'):
+        raise ValueError("--level must be either 'abstracted' or 'action'")
+
+    return recipe_query, level
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # 3A. Load canonical graph from Step 2
 # ─────────────────────────────────────────────────────────────────────────────
 
-def load_canonical_data(recipe_query, outputs_dir='../outputs'):
+def load_canonical_data(recipe_query, level='abstracted', outputs_dir='../outputs'):
     """Load the canonical graph and traces saved by Step 2."""
     outputs_path = Path(outputs_dir)
-    query = recipe_query.strip().lower().replace(' ', '_').replace(',', '')
+    query = normalize_safe_name(recipe_query)
+
+    preferred = outputs_path / f'graphs/canonical_graph_{query}_{level}.pkl'
+    candidates = [preferred] if preferred.exists() else []
 
     # Find matching canonical graph file
-    candidates = list(outputs_path.glob(f'graphs/canonical_graph_*{query}*.pkl'))
+    if not candidates:
+        candidates = list(outputs_path.glob(f'graphs/canonical_graph_*{query}*.pkl'))
+
+    # Filter by level where metadata is available
+    filtered = []
+    for c in candidates:
+        try:
+            with open(c, 'rb') as f:
+                data = pickle.load(f)
+            c_level = data.get('meta', {}).get('abstraction_level')
+            if c_level is None and c.name.endswith(f'_{level}.pkl'):
+                filtered.append(c)
+            elif c_level == level:
+                filtered.append(c)
+        except Exception:
+            continue
+    if filtered:
+        candidates = filtered
+
     if not candidates:
         # Try all files
         candidates = list(outputs_path.glob('graphs/canonical_graph_*.pkl'))
@@ -54,7 +108,7 @@ def load_canonical_data(recipe_query, outputs_dir='../outputs'):
         for c in candidates:
             print(f"  {c.name}")
         raise FileNotFoundError(
-            f"No canonical graph found for '{recipe_query}'. "
+            f"No canonical graph found for '{recipe_query}' at level '{level}'. "
             "Run step2_canonical_graph.py first."
         )
 
@@ -64,6 +118,7 @@ def load_canonical_data(recipe_query, outputs_dir='../outputs'):
     with open(graph_path, 'rb') as f:
         data = pickle.load(f)
 
+    data['meta']['abstraction_level'] = data.get('meta', {}).get('abstraction_level', level)
     return data['graph'], data['traces'], data['meta']
 
 
@@ -359,10 +414,10 @@ def analyze_trace(trace, G, canonical_actions, critical_actions, canonical_seque
 # 3H. Generate reports
 # ─────────────────────────────────────────────────────────────────────────────
 
-def generate_reports(all_results, recipe_name, output_dir='../outputs/tables'):
+def generate_reports(all_results, recipe_name, level='abstracted', output_dir='../outputs/tables'):
     """Generate CSV reports from deviation analysis."""
     output_dir = Path(output_dir)
-    safe_name = recipe_name.lower().replace(' ', '_').replace(',', '')
+    safe_name = normalize_safe_name(recipe_name)
 
     # 1. Detailed deviation report (one row per deviation instance)
     detail_rows = []
@@ -417,7 +472,7 @@ def generate_reports(all_results, recipe_name, output_dir='../outputs/tables'):
             })
 
     detail_df = pd.DataFrame(detail_rows)
-    detail_path = output_dir / f'deviation_report_{safe_name}.csv'
+    detail_path = output_dir / f'deviation_report_{safe_name}_{level}.csv'
     detail_df.to_csv(detail_path, index=False)
     print(f"\n✓ Detailed deviation report saved to {detail_path}")
     print(f"  Total deviations found: {len(detail_df)}")
@@ -444,7 +499,7 @@ def generate_reports(all_results, recipe_name, output_dir='../outputs/tables'):
         })
 
     summary_df = pd.DataFrame(summary_rows)
-    summary_path = output_dir / f'deviation_summary_{safe_name}.csv'
+    summary_path = output_dir / f'deviation_summary_{safe_name}_{level}.csv'
     summary_df.to_csv(summary_path, index=False)
     print(f"✓ Summary saved to {summary_path}")
 
@@ -495,16 +550,28 @@ def generate_reports(all_results, recipe_name, output_dir='../outputs/tables'):
 def main():
     if len(sys.argv) < 2:
         print("Usage: python step3_deviation_detection.py <recipe_name_or_id>")
+        print("       python step3_deviation_detection.py <recipe_name_or_id> --level abstracted")
+        print("       python step3_deviation_detection.py <recipe_name_or_id> --level action")
         sys.exit(1)
 
-    recipe_query = sys.argv[1]
+    try:
+        recipe_query, level = parse_cli_args(sys.argv[1:])
+    except ValueError as e:
+        print(f"ERROR: {e}")
+        sys.exit(1)
+
+    if not recipe_query:
+        print("ERROR: Missing recipe_name_or_id.")
+        sys.exit(1)
+
     create_output_dirs()
 
     # Load canonical graph from Step 2
-    G, traces, meta = load_canonical_data(recipe_query)
+    G, traces, meta = load_canonical_data(recipe_query, level=level)
     recipe_name = meta.get('name', recipe_query)
+    level = meta.get('abstraction_level', level)
 
-    print(f"\nAnalyzing deviations for '{recipe_name}'")
+    print(f"\nAnalyzing deviations for '{recipe_name}' ({level} level)")
     print(f"Canonical graph: {G.number_of_nodes()-2} actions, {G.number_of_edges()} transitions")
     print(f"Traces to analyze: {len(traces)}")
 
@@ -521,10 +588,11 @@ def main():
         all_results.append(result)
 
     # Generate reports
-    detail_df, summary_df = generate_reports(all_results, recipe_name)
+    detail_df, summary_df = generate_reports(all_results, recipe_name, level=level)
 
     # Save full results as pickle for Step 4
-    results_path = Path(f'../outputs/graphs/deviation_results_{recipe_name.lower().replace(" ", "_")}.pkl')
+    safe_name = normalize_safe_name(recipe_name)
+    results_path = Path(f'../outputs/graphs/deviation_results_{safe_name}_{level}.pkl')
     with open(results_path, 'wb') as f:
         pickle.dump({
             'results': all_results,
@@ -532,6 +600,7 @@ def main():
             'critical_actions': critical_actions,
             'canonical_sequence': canonical_sequence,
             'recipe_name': recipe_name,
+            'abstraction_level': level,
         }, f)
     print(f"\n✓ Full results saved to {results_path}")
 
