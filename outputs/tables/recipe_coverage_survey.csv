@@ -1,0 +1,66 @@
+recipe_name,participant_count,participants,total_sessions,total_actions,avg_steps,recipe_ids
+coffee,2,"P07, P08",5,1824,6.75,"P07_R01, P07_R05, P07_R06, P08_R01"
+porridge,1,P05,7,591,3.0,P05_R02
+sfesiha (lebanese meat pies),1,P01,6,2341,7.0,P01_R04
+aloo stuffing for masala dosa,1,P04,5,1125,5.0,P04_R04
+carrot soup,1,P01,4,2153,2.0,P01_R06
+dal makhani with rice,1,P06,4,1988,10.0,P06_R04
+drip coffee,1,P03,4,1743,6.0,P03_R03
+vermicelli rice with meat,1,P01,4,1454,7.0,P01_R07
+chickpea and spinach curry with rice,1,P05,4,964,12.0,P05_R01
+masala dosa,1,P04,4,877,6.0,P04_R05
+squash,1,P02,4,672,3.0,P02_R03
+raspberry and lemon curd tarts,1,P02,3,2603,5.0,P02_R06
+hibiscus drink,1,P09,3,2432,4.0,P09_R03
+chicken cheese balls,1,P09,3,2258,9.0,P09_R02
+cheese straws,1,P02,3,2248,5.0,P02_R07
+grilled chicken wrap,1,P04,3,1793,4.0,P04_R01
+peas pulao,1,P04,3,1477,8.0,P04_R06
+lazy cake recipe,1,P01,3,1466,6.0,P01_R05
+marinated chicken with soy sauce,1,P01,3,1437,5.0,P01_R08
+uttapam pancake,1,P06,3,1201,11.0,P06_R01
+date balls,1,P01,3,821,5.0,P01_R09
+stir fry,1,P05,3,755,5.0,P05_R06
+nespresso,1,P01,3,373,5.0,P01_R01
+pizza dough,1,P03,2,2269,6.0,P03_R05
+mushroom doner kebab,1,P02,2,1650,7.0,P02_R10
+french fries and beef skewers,1,P09,2,1456,9.0,P09_R06
+cappuccino,1,P06,2,1220,5.0,"P06_R02, P06_R07"
+mushroom risotto,1,P07,2,1118,18.0,P07_R03
+spaghetti bolognese,1,P08,2,1085,8.0,P08_R08
+chopped chickpea salad,1,P07,2,741,14.0,P07_R02
+banana bread chocolate chip cookies,1,P07,2,687,13.0,P07_R04
+scrambled eggs with green peppers and mushrooms,1,P04,2,648,5.0,P04_R02
+carbonara with side salad,1,P05,2,648,7.0,P05_R04
+pesto,1,P05,2,621,10.0,P05_R03
+chicken tabbouleh salad,1,P08,2,565,5.0,P08_R04
+cacio e pepe,1,P01,2,448,4.0,P01_R03
+mangsho bhuna,1,P09,1,1701,8.0,P09_R04
+mango lassi,1,P09,1,1701,4.0,P09_R05
+spanish tortilla,1,P03,1,1645,7.0,P03_R04
+roasted kale,1,P03,1,1645,3.0,P03_R06
+thai red curry,1,P09,1,1415,8.0,P09_R01
+cheese baguette,1,P02,1,1245,3.0,P02_R08
+red lentils squash curry,1,P03,1,1239,11.0,P03_R01
+beef stroganoff,1,P03,1,1217,13.0,P03_R02
+kadhai paneer,1,P06,1,1174,6.0,P06_R03
+"mushroom, tomato, sweetcorn and onion saute",1,P02,1,1171,6.0,P02_R01
+sauteed potatoes,1,P02,1,1171,7.0,P02_R02
+pizza with aubergine and egg,1,P03,1,1169,8.0,P03_R07
+tomato sauce,1,P03,1,1169,3.0,P03_R08
+pizza with plant-based mince and mushrooms,1,P03,1,1169,5.0,P03_R09
+fish cakes and vegetables,1,P08,1,800,11.0,P08_R07
+bread omelette,1,P06,1,761,5.0,P06_R06
+tuna pasta salad,1,P08,1,708,3.0,P08_R06
+chocolate pudding,1,P05,1,608,5.0,P05_R05
+southwestern salad,1,P07,1,601,9.0,P07_R07
+boiled sweetcorn,1,P02,1,579,2.0,P02_R11
+granola with almond milk and cinnamon,1,P04,1,563,3.0,P04_R03
+aloo paratha,1,P06,1,514,15.0,P06_R05
+bacon and egg sandwich,1,P02,1,480,6.0,P02_R04
+salmon teriyaki skewers with vegetables,1,P08,1,424,6.0,P08_R05
+dumplings with soy sauce and sesame oil,1,P03,1,409,4.0,P03_R10
+crispy cucumber salad,1,P08,1,401,6.0,P08_R09
+scrambled eggs,1,P08,1,319,7.0,P08_R03
+cereal,1,P02,1,260,2.0,P02_R05
+chopped salad and bread,1,P08,1,221,5.0,P08_R02
