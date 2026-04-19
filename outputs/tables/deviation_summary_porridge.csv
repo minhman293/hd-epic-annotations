@@ -1,0 +1,8 @@
+video_id,participant,action_count,unique_actions,n_omissions_critical,n_omissions_moderate,edit_distance,normalized_edit_distance,n_swapped_pairs,n_oscillations,n_rare_transitions,n_novel_transitions
+P05-20240424-085204,P05,105,69,1,2,0,0.0,0,1,70,0
+P05-20240424-090812,P05,43,33,1,8,0,0.0,0,2,28,0
+P05-20240425-082420,P05,120,69,0,2,0,0.0,0,3,69,0
+P05-20240425-083515,P05,60,41,0,1,1,0.333,1,1,31,0
+P05-20240426-085333,P05,195,83,0,0,0,0.0,0,8,143,0
+P05-20240426-091011,P05,27,17,4,14,0,0.0,0,3,12,0
+P05-20240426-092000,P05,41,34,2,12,0,0.0,0,0,29,0
